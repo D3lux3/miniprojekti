@@ -1,35 +1,25 @@
 import requests
 import re
-from bs4 import BeautifulSoup
 import json
+from bs4 import BeautifulSoup
 
 x = requests.get('https://www.youtube.com/results?search_query=asd')
 
 soup = BeautifulSoup(x.content, 'html.parser')
 
+pattern = 'var\s+ytInitialData\s*=\s*{(.*?)};'
+
 
 script_tags = soup.find_all('script')
 
-videos = []
-
-# Iterate through each <script> tag and search for the JavaScript object
 for script_tag in script_tags:
-    # Get the text content of the script tag
     script_content = script_tag.string
+
     if script_content:
-        # Use regular expressions to search for "videoRenderer" properties and their values
-        matches = re.finditer(r'"videoRenderer":\s*({[^}]+})', script_content)
+        # Use regular expressions to search for the JavaScript object
+        matches = re.findall(r'var\s+ytInitialData\s*=\s*{(.*?)};', script_content, re.DOTALL)
 
-        for match in matches:
-            # Extract and parse the JSON object
-            m = match.group(1)
-            print(m)
-
-            json_data = json.loads(m)
-            # Append the "videoRenderer" property and its value
-            videos.append(json_data["videoRenderer"])
-
-# Print the extracted "videoRenderer" properties and their values
-for video_renderer in videos:
-    print("Video Renderer:")
-    print(json.dumps(video_renderer, indent=4))
+        if len(matches) == 1:
+            f = open("test.json", "a")
+            f.write(f"{'{'}{matches[0]}{'}'}")
+            f.close()
