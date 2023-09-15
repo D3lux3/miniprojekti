@@ -1,0 +1,20 @@
+Video Id,Title,View Count,Length,Channel
+9NQ7czFEUhg,How Does LibC Detect Redirection? Interesting Bug Follow Up.,9 006 katselukertaa,8.02,/@JacobSorber
+Uj2z-3qAchA,Win32 Is The Only Stable ABI on Linux (RIP Glibc),17 233 katselukertaa,11.54,/@BrodieRobertson
+tMN5N5oid2c,Binary Exploitation Deep Dive: Return to LIBC (with Matt),170 683 katselukertaa,2.12.41,/@_JohnHammond
+m17mV24TgwY,Doing ret2libc with a Buffer Overflow because of restricted return pointer - bin 0x0F,95 275 katselukertaa,10.38,/@LiveOverflow
+0CFWHjc4B-I,6: Return to Lib-C (ret2system/one_gadget) - Buffer Overflows - Intro to Binary Exploitation (Pwn),7 553 katselukertaa,25.44,/@_CryptoCat
+K2Re0pG_1g4,writing a 5kb http server without libc,8 997 katselukertaa,1.35.54,/@lolisamurai
+Cc1rBayMnVI,Building a distro with musl libc Why and how Alpine Linux did it,11 233 katselukertaa,25.32,/@fosdemtalks
+QAbveJB5kk8,what is musllinux (PEP 656) (intermediate) anthony explains #467,2 691 katselukertaa,4.43,/@anthonywritescode
+1N85yU6RMcY,Ziglibc: Sweeping out the rug from underneath C - Jonathan Marler - Software You Can Love 2022,25 086 katselukertaa,58.53,/@ZigSHOWTIME
+OpY4lnpnbq4,2022 LLVM Dev Mtg: Using LLVM's libc,2 397 katselukertaa,44.29,/@LLVMPROJ
+dNoo5sS3DW8,2022 play fun game with LIBC coaches,108 katselukertaa,30.29,/@haikubronxville9653
+FkIWDAtVIUM,Linux Tutorial: How a Linux System Call Works,163 216 katselukertaa,2.31,/@LinuxfoundationOrg
+ePPSfjiHse8,LIBC | U17/U19 v. Anders Antonsen,12 857 katselukertaa,6.56,/@ryanwu6879
+evug4AhrO7o,picoCTF 2018 [27] ret2libc Exploits (got 2 learn libc),12 426 katselukertaa,17.21,/@_JohnHammond
+rwX43rDXLws,LIBC intro,1 092 katselukertaa,0.58,/@badmintonspace
+undkP-HF18o,LIBC- Thousand Million,379 katselukertaa,16.09,/@she_skin
+JbHmin2Wtmc,How to write your own code libraries in C.,112 956 katselukertaa,9.57,/@JacobSorber
+d1wXuWnZS2A,Return to libc,9 485 katselukertaa,3.52,/@Udacity
+olWlLNV_aNY,LIBC- Even If/ That's All,520 katselukertaa,17.31,/@she_skin
