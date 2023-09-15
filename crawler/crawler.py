@@ -5,7 +5,14 @@ from bs4 import BeautifulSoup
 import csv
 import os
 import os.path
+import sys
 
+search_arg = ""
+name_arg = ""
+
+if len(sys.argv) > 1:
+    query_arg = "&sp=CAM%253D"
+    name_arg = "_most_watched"
 
 def get_amount_of_files_in_outputs():
     return len([name for name in os.listdir('./outputs/') if os.path.isfile(os.path.join('./outputs/', name))])
@@ -23,7 +30,7 @@ def start(filename):
 
 
 def get_video_data_by_word(query):
-    x = requests.get(f"https://www.youtube.com/results?search_query={query}")
+    x = requests.get(f"https://www.youtube.com/results?search_query={query}{query_arg}")
     soup = BeautifulSoup(x.content, 'html.parser')
 
     script_tags = soup.find_all('script')
@@ -57,7 +64,7 @@ def map_video_data(video):
 
 
 def parse_json_to_csv_file(query, json_data):
-    print(f'Starting to save query: {query}')
+    print(f'Starting to save query: {query}{name_arg}')
     data = json.loads(json_data)
 
     field_names = ['Video Id', 'Title', 'View Count', 'Length', 'Channel']
@@ -67,7 +74,7 @@ def parse_json_to_csv_file(query, json_data):
 
     videos = (map_video_data(vid) for vid in video_data if 'videoRenderer' in vid)
 
-    with open(f'outputs/{query}.csv', 'w') as csvfile:
+    with open(f'outputs/{query}{name_arg}.csv', 'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=field_names)
         writer.writeheader()
         writer.writerows(videos)
