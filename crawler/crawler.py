@@ -15,7 +15,7 @@ if len(sys.argv) > 1:
     name_arg = "_most_watched"
 
 def get_amount_of_files_in_outputs():
-    return len([name for name in os.listdir('./outputs/') if os.path.isfile(os.path.join('./outputs/', name))])
+    return len([name for name in os.listdir('./outputs/') if os.path.isfile(os.path.join('./outputs/', name)) and name_arg in name])
 
 # TODO: Logic that handles situations where the query fails. Message or re-run.
 
@@ -24,6 +24,7 @@ def start(filename):
     search_words_file = open(filename, 'r')
     search_words = search_words_file.readlines()
     file_amount = get_amount_of_files_in_outputs()
+    print(f"Number of files: {file_amount} arg: {name_arg}")
 
     for word in search_words[file_amount:]:
         get_video_data_by_word(word.strip())

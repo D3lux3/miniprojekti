@@ -6,4 +6,4 @@ def crawler(ctx):
 
 @task
 def crawlmost(ctx):
-    ctx.run("python3 crawler/crawler.py &sp=CAM%253D")
+    ctx.run("python3 crawler/crawler.py most")
