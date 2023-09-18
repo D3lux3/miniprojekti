@@ -1,0 +1,21 @@
+Video Id,Title,View Count,Length,Channel
+ry82fT_LxWE,LIBC | Anders Antonsen v. Iqbal Aji Tri Pamungkas | 15 pts. BOX,207 409 katselukertaa,15.11,/@ryanwu6879
+tMN5N5oid2c,Binary Exploitation Deep Dive: Return to LIBC (with Matt),170 704 katselukertaa,2.12.41,/@_JohnHammond
+m17mV24TgwY,Doing ret2libc with a Buffer Overflow because of restricted return pointer - bin 0x0F,95 286 katselukertaa,10.38,/@LiveOverflow
+FvQYGAM1X9U,W2_2 - Return-to-libc attack,17 930 katselukertaa,13.32,/@nptel-nociitm9240
+pVBnjSQ4Fjk,Buffer Overflow Primer Part 8 (Return To Libc Theory),16 530 katselukertaa,13.34,/@TheSecurityTube
+Gu_JGaWpcn4,W2_5d - Demonstration of a Return-to-Libc Attack,16 027 katselukertaa,17.46,/@nptel-nociitm9240
+dnHuZLySS6g,Leaking Heap and Libc address - BKPCTF cookbook (pwn 6) part 2,14 062 katselukertaa,25.48,/@LiveOverflow
+ePPSfjiHse8,LIBC | U17/U19 v. Anders Antonsen,12 858 katselukertaa,6.56,/@ryanwu6879
+LBo56Xyowvk,Return-to-libc Attack Lecture,12 709 katselukertaa,49.55,/@kevindu3738
+evug4AhrO7o,picoCTF 2018 [27] ret2libc Exploits (got 2 learn libc),12 428 katselukertaa,17.21,/@_JohnHammond
+Cc1rBayMnVI,Building a distro with musl libc Why and how Alpine Linux did it,11 235 katselukertaa,25.32,/@fosdemtalks
+XAejDLhCmng,/lib64/libc.so.6: version `GLIBC_2.14' not found Resolved,10 952 katselukertaa,12.24,/@swapnilninave17
+TKGHTqUXSPc,MADE IN LIBC,10 027 katselukertaa,3.53,/@LiBC
+9g0sGCDe8R4,"How to fix ""/lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.14' not found""? (3 Solutions!!)",10 021 katselukertaa,2.23,/@RoelVandePaar
+4PdktJX2HvU,Return to libc,9 868 katselukertaa,8.51,/@josefrausto7932
+d1wXuWnZS2A,Return to libc,9 490 katselukertaa,3.52,/@Udacity
+z1pLHAvWSK8,Steam missing the following 32-bit libraries : libc.so.6,9 272 katselukertaa,1.24,/@RoelVandePaar
+9NQ7czFEUhg,How Does LibC Detect Redirection? Interesting Bug Follow Up.,9 009 katselukertaa,8.02,/@JacobSorber
+K2Re0pG_1g4,writing a 5kb http server without libc,8 999 katselukertaa,1.35.54,/@lolisamurai
+34SabwAs8KU,Return-To-Libc Attack SEED Labs Solution,8 866 katselukertaa,4.27,/@Najonano1
