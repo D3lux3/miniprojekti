@@ -29,3 +29,9 @@ Runs wrangler in Jupyter notebook:
 ```
 $ poetry run invoke wrangler
 ```
+
+Runs EDA in Jupyter notebook:
+
+```
+$ poetry run invoke eda
+```

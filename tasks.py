@@ -15,3 +15,7 @@ def crawlmost(ctx):
 @task
 def wrangler(ctx):
     ctx.run("jupyter notebook wrangler/wrangler.ipynb")
+
+@task
+def eda(ctx):
+    ctx.run("jupyter notebook eda/eda.ipynb")
