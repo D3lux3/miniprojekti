@@ -1,3 +1,4 @@
+import random
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import pandas as pd
@@ -13,6 +14,9 @@ CORS(app, origins="http://localhost:5173", supports_credentials=True)
 def get_message():
     return jsonify(message="Hello")
 
+@app.route("/randrank", methods=["GET"])
+def get_random_rank():
+    return jsonify(rank=round(random.uniform(0.00, 100.00), 2))
 
 @app.route("/", methods=["POST"])
 def update_message():
