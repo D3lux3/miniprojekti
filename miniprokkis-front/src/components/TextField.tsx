@@ -1,5 +1,11 @@
 import { TextField as TextF, styled } from "@mui/material";
-import { useEffect, useState } from "react";
+import { Dispatch, useEffect, useState } from "react";
+import { rankResponseSchema } from "../types/rank";
+
+interface TextFieldProps {
+    setRank: Dispatch<number>
+}
+
 
 const StyledTextField = styled(TextF)({
     '& label.Mui-focused': {
@@ -22,51 +28,28 @@ const StyledTextField = styled(TextF)({
     },
 });
 
-const getRandomWord = () => {
-    const randomWords = [
-        "apple",
-        "banana",
-        "chocolate",
-        "dog",
-        "elephant",
-        "flamingo",
-        "giraffe",
-        "hamburger",
-        "iguana",
-        "jazz",
-        "koala",
-        "lemon",
-        "mango",
-        "narwhal",
-        "octopus",
-        "penguin",
-        "quokka",
-        "rabbit",
-        "strawberry",
-        "tiger",
-        "umbrella",
-        "volcano",
-        "watermelon",
-        "xylophone",
-        "yak",
-        "zebra"
-      ];
-      return randomWords[Math.floor(Math.random()*randomWords.length)];
-};
+const TextField = ({ setRank }: TextFieldProps) => {
 
-const TextField = () => {
-    const [text, setText] = useState('');
-    const [placeholdertext, setPlaceholdertext] = useState('');
+    const [text, setText] = useState<string>('');
 
     useEffect(() => {
-        const delayReq = setTimeout(() => {
-            setPlaceholdertext(`${text} ${getRandomWord()}`);
-        }, 1000);
-        return () => clearTimeout(delayReq);
+        if (text.length > 0) {
+            const delayReq = setTimeout(async () => {
+                const getRandomRank = async () => {
+                    const data = await fetch(`http://127.0.0.1:5000/randrank`);
+                    const validated = await rankResponseSchema.validate(await data.json());
+                    return validated.rank;
+                };
+                setRank(await getRandomRank());
+            }, 250);
+            return () => clearTimeout(delayReq);
+        }
+        setRank(0);
+        return;
     }, [text]);
 
     return (
-        <StyledTextField onChange={(event) => setText(event.target.value)} placeholder={placeholdertext}/>
+        <StyledTextField onChange={(event) => setText(event.target.value)} placeholder={"Enter your title"} />
     );
 };
 
