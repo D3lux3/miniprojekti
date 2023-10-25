@@ -16,7 +16,7 @@ def get_message():
 
 @app.route("/randrank", methods=["GET"])
 def get_random_rank():
-    return jsonify(rank=round(random.uniform(0.00, 100.00), 2))
+    return jsonify(rank=round(random.uniform(0.00, 1.00), 2))
 
 @app.route("/", methods=["POST"])
 def update_message():
