@@ -1,4 +1,3 @@
-*.json
 20k.txt
 htmlcov
 .pytest_cache
