@@ -11,6 +11,7 @@ Flask = "^3.0.0"
 Flask-Cors = "^4.0.0"
 pandas = "^2.1.1"
 beautifulsoup4 = "^4.12.2"
+nltk = "^3.8.1"
 
 [tool.poetry.dev-dependencies]
 
