@@ -28,7 +28,6 @@ const StyledTextField = styled(TextF)({
 
 const TextField = ({ setRank }: TextFieldProps) => {
   const [text, setText] = useState<string>('')
-  console.log(text)
 
   useEffect(() => {
     if (text.length > 0) {

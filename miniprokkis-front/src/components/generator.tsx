@@ -53,14 +53,14 @@ const Generator = () => {
         <div className="container">
             <h1>title generator</h1>
             <Stack direction="row" spacing={2}>
-                <Button variant="outlined" color="success" onClick={generate} disabled={disabled}>generate</Button>
-                <Button variant="outlined" onClick={deleteWord} disabled={title.length == 0}>back</Button>
-                <Button variant="outlined" color="error" onClick={() => { setTitle(""); setDisabled(false) }} disabled={title.length == 0}>clear</Button>
-                <Button variant="outlined" onClick={() => navigator.clipboard.writeText(title)} >copy title</Button>
+                <Button variant="contained" color="success" onClick={generate} disabled={disabled}>generate</Button>
+                <Button variant="contained" onClick={deleteWord} disabled={title.length == 0}>back</Button>
+                <Button variant="contained" color="error" onClick={() => { setTitle(""); setDisabled(false) }} disabled={title.length == 0}>clear</Button>
+                <Button variant="contained" onClick={() => navigator.clipboard.writeText(title)} >copy title</Button>
             </Stack>
-            <h4>Randomness: {chaos}</h4>
+            <p>Randomness: {chaos}</p>
             <Slider defaultValue={3} min={0} max={20} onChange={(e, v) => setChaos(v as number)} valueLabelDisplay="auto" />
-            <h2>{title}</h2>
+            <h2 style={{color: "#1976d2"}}>{title}</h2>
         </div>
     );
 };

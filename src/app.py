@@ -20,7 +20,7 @@ def rank_title(input):
     print(input)
     input = re.sub(r"[^\w\s]", "", input.lower()) # remove punctuations and change to lower
     stemmed_words = [PorterStemmer().stem(word) for word in str(input).split()] # stemming
-    return round(sum(word_rank.get(word, 0) for word in stemmed_words), 2)
+    return round(sum(word_rank.get(word, 0) for word in stemmed_words) / len(stemmed_words), 2)
 
 app = Flask(__name__)
 CORS(app, origins="http://localhost:5173", supports_credentials=True)

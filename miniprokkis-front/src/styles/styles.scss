@@ -1,8 +1,15 @@
 
 body {
     font-family: 'IBM Plex Mono';
+    background-color: #ffab8a;
 }
 
 h1 {
     letter-spacing: 0.5rem;
+}
+
+
+// mui override
+.MuiButton-root {
+    box-shadow: none !important;
 }

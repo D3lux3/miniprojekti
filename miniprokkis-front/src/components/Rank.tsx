@@ -4,18 +4,24 @@ interface RankProps {
 
 const getEmoji = (rank: number) => {
     switch (true) {
-        case rank === 1.0:
+        case rank >= 9.0:
             return "🌟"; // Highest rank
-        case rank >= 0.8:
+        case rank >= 0.7:
             return "⭐";
-        case rank >= 0.6:
+        case rank >= 0.5:
             return "✨";
-        case rank >= 0.4:
+        case rank >= 0.3:
             return "🌙";
-        case rank >= 0.2:
+        case rank >= 0.1:
             return "😕";
-        case rank > 0.0:
+        case rank > -0.1:
             return "💧";
+        case rank > -0.3:
+            return "🌧️";
+        case rank > -0.5:
+            return "⛈️️";
+        case rank > -0.7:
+            return "🌪️";
         default:
             return "❌"; // Lowest rank
     }
