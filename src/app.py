@@ -53,9 +53,9 @@ def get_next_word():
                 previous = split[len(split) - 1]
         if previous in predict_data:
             all_next = predict_data[previous]
-            index = random.randint(0, min(len(all_next), chaos))
+            index = random.randint(0, min(len(all_next) - 1, chaos))
             return jsonify(word=all_next[index])
-        return jsonify("{}")
+        return jsonify(word="")
     return jsonify("{Error: badly formatted request}")
 
 if __name__ == "__main__":
