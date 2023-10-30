@@ -26,9 +26,8 @@ def start(filename):
     file_amount = get_amount_of_files_in_outputs()
     print(f"Number of files: {file_amount} arg: {name_arg}")
 
-    for word in search_words[file_amount:]:
+    for word in search_words[:30]:
         get_video_data_by_word(word.strip())
-
 
 def get_video_data_by_word(query):
     x = requests.get(f"https://www.youtube.com/results?search_query={query}{query_arg}")
@@ -75,7 +74,7 @@ def parse_json_to_csv_file(query, json_data):
 
     videos = (map_video_data(vid) for vid in video_data if 'videoRenderer' in vid)
 
-    with open(f'outputs/{query}{name_arg}.csv', 'w') as csvfile:
+    with open(f'outputs2/{query}{name_arg}.csv', 'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=field_names)
         writer.writeheader()
         writer.writerows(videos)
